@@ -26,22 +26,25 @@ public class MarsRover {
                 move();
                 break;
             case Command.TURN_LEFT:
-                trunLeft();
+                turnLeft();
                 break;
             case Command.TURN_RIGHT:
-                trunRight();
+                turnRight();
                 break;
         }
     }
 
-    private void trunRight() {
+    private void turnRight() {
         switch (direction){
             case Command.NORTH:
                 direction = Command.EAST;
+            case Command.EAST:
+                direction = Command.SOUTH;
+                break;
         }
     }
 
-    private void trunLeft() {
+    private void turnLeft() {
         switch (direction){
             case Command.NORTH:
                 direction = Command.WEST;
