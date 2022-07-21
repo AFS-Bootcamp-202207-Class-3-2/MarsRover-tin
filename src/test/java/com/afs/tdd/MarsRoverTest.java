@@ -9,195 +9,194 @@ class MarsRoverTest {
     @Test
     void should_go_to_0_1_N_when_getMarsRoverReport_given_0_0_N() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.NORTH);
-
-        //when
-        rover.getMarsRoverReport(Command.FORWARD);
+        MarsRover rover = new MarsRover(0,0,CommandConstant.NORTH);
         //then
-        assertEquals(0, rover.getxPosition());
+        rover.getMarsRoverReport(CommandConstant.FORWARD);
 
-        assertEquals(1, rover.getyPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(Command.NORTH, rover.getDirection());
+        assertEquals(1, rover.getYPosition());
+
+        assertEquals(CommandConstant.NORTH, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_0_W_when_getMarsRoverReport_given_0_0_N() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.NORTH);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
 
         //when
-        rover.getMarsRoverReport(Command.TURN_LEFT);
+        rover.getMarsRoverReport(CommandConstant.TURN_LEFT);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.WEST, rover.getDirection());
+        assertEquals(CommandConstant.WEST, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_0_E_when_getMarsRoverReport_given_0_0_N() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.NORTH);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
 
         //when
-        rover.getMarsRoverReport(Command.TURN_RIGHT);
+        rover.getMarsRoverReport(CommandConstant.TURN_RIGHT);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.EAST, rover.getDirection());
+        assertEquals(CommandConstant.EAST, rover.getDirection());
     }
 
     @Test
     void should_go_to_1_0_E_when_getMarsRoverReport_given_0_0_E() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.EAST);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
 
         //when
-        rover.getMarsRoverReport(Command.FORWARD);
+        rover.getMarsRoverReport(CommandConstant.FORWARD);
         //then
-        assertEquals(1, rover.getxPosition());
+        assertEquals(1, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.EAST, rover.getDirection());
+        assertEquals(CommandConstant.EAST, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_0_N_when_getMarsRoverReport_given_0_0_E() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.EAST);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
 
         //when
-        rover.getMarsRoverReport(Command.TURN_LEFT);
+        rover.getMarsRoverReport(CommandConstant.TURN_LEFT);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.NORTH, rover.getDirection());
+        assertEquals(CommandConstant.NORTH, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_0_S_when_getMarsRoverReport_given_0_0_E() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.EAST);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
 
         //when
-        rover.getMarsRoverReport(Command.TURN_RIGHT);
+        rover.getMarsRoverReport(CommandConstant.TURN_RIGHT);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.SOUTH, rover.getDirection());
+        assertEquals(CommandConstant.SOUTH, rover.getDirection());
     }
 
     @Test
     void should_go_to_minus_1_0_W_when_getMarsRoverReport_given_0_0_W() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.WEST);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
 
         //when
-        rover.getMarsRoverReport(Command.FORWARD);
+        rover.getMarsRoverReport(CommandConstant.FORWARD);
         //then
-        assertEquals(-1, rover.getxPosition());
+        assertEquals(-1, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.WEST, rover.getDirection());
+        assertEquals(CommandConstant.WEST, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_0_S_when_getMarsRoverReport_given_0_0_W() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.WEST);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
 
         //when
-        rover.getMarsRoverReport(Command.TURN_LEFT);
+        rover.getMarsRoverReport(CommandConstant.TURN_LEFT);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.SOUTH, rover.getDirection());
+        assertEquals(CommandConstant.SOUTH, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_0_N_when_getMarsRoverReport_given_0_0_W() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.WEST);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
 
         //when
-        rover.getMarsRoverReport(Command.TURN_RIGHT);
+        rover.getMarsRoverReport(CommandConstant.TURN_RIGHT);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.NORTH, rover.getDirection());
+        assertEquals(CommandConstant.NORTH, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_minus_1_S_when_getMarsRoverReport_given_0_0_S() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.SOUTH);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
 
         //when
-        rover.getMarsRoverReport(Command.FORWARD);
+        rover.getMarsRoverReport(CommandConstant.FORWARD);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(-1, rover.getyPosition());
+        assertEquals(-1, rover.getYPosition());
 
-        assertEquals(Command.SOUTH, rover.getDirection());
+        assertEquals(CommandConstant.SOUTH, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_0_E_when_getMarsRoverReport_given_0_0_S() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.SOUTH);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
 
         //when
-        rover.getMarsRoverReport(Command.TURN_LEFT);
+        rover.getMarsRoverReport(CommandConstant.TURN_LEFT);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.EAST, rover.getDirection());
+        assertEquals(CommandConstant.EAST, rover.getDirection());
     }
 
     @Test
     void should_go_to_0_0_W_when_getMarsRoverReport_given_0_0_S() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.SOUTH);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
 
         //when
-        rover.getMarsRoverReport(Command.TURN_RIGHT);
+        rover.getMarsRoverReport(CommandConstant.TURN_RIGHT);
         //then
-        assertEquals(0, rover.getxPosition());
+        assertEquals(0, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(0, rover.getYPosition());
 
-        assertEquals(Command.WEST, rover.getDirection());
+        assertEquals(CommandConstant.WEST, rover.getDirection());
     }
 
     @Test
     void should_go_to_minus_2_0_N_when_getMarsRoverReport_given_0_0_N() {
         //given
-        MarsRover rover = new MarsRover(0, 0, Command.NORTH);
+        MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
 
         //when
-        rover.getMarsRoverReport("MLMLMRMR");
+        rover.getMarsRoverReport("LMRM");
         //then
-        assertEquals(-2, rover.getxPosition());
+        assertEquals(-1, rover.getXPosition());
 
-        assertEquals(0, rover.getyPosition());
+        assertEquals(1, rover.getYPosition());
 
-        assertEquals(Command.NORTH, rover.getDirection());
+        assertEquals(CommandConstant.NORTH, rover.getDirection());
     }
 }
