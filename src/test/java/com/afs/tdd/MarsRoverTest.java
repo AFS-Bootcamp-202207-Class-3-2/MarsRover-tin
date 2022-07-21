@@ -142,7 +142,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_minus_1_W_when_getMarsRoverReport_given_0_0_S() {
+    void should_go_to_0_minus_1_S_when_getMarsRoverReport_given_0_0_S() {
         //given
         MarsRover rover = new MarsRover(0, 0, Command.SOUTH);
 
@@ -153,6 +153,6 @@ class MarsRoverTest {
 
         assertEquals(-1, rover.getyPosition());
 
-        assertEquals(Command.WEST, rover.getDirection());
+        assertEquals(Command.SOUTH, rover.getDirection());
     }
 }
