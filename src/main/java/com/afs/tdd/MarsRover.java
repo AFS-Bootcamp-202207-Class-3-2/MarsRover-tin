@@ -28,7 +28,16 @@ public class MarsRover {
             case Command.TURN_LEFT:
                 trunLeft();
                 break;
+            case Command.TURN_RIGHT:
+                trunRight();
+                break;
+        }
+    }
 
+    private void trunRight() {
+        switch (direction){
+            case Command.NORTH:
+                direction = Command.EAST;
         }
     }
 
