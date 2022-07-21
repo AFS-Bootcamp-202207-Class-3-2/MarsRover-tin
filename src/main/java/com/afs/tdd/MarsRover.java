@@ -57,6 +57,9 @@ public class MarsRover {
             case Command.WEST:
                 direction = Command.SOUTH;
                 break;
+            case Command.SOUTH:
+                direction = Command.EAST;
+                break;
 
         }
     }
