@@ -45,16 +45,19 @@ public class MarsRover {
         switch (direction){
             case Command.NORTH:
                 direction = Command.WEST;
+            case Command.EAST:
+                direction = Command.NORTH;
+                break;
         }
     }
 
     private void move() {
         switch (direction){
-            case "N":
+            case Command.NORTH:
                 yPosition ++;
                 break;
-            case "E":
-                xPosition --;
+            case Command.EAST:
+                xPosition ++;
                 break;
         }
     }

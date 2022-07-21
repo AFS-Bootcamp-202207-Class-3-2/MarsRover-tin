@@ -59,7 +59,7 @@ class MarsRoverTest {
         //when
         rover.getMarsRoverReport(Command.FORWARD);
         //then
-        assertEquals(-1, rover.getxPosition());
+        assertEquals(1, rover.getxPosition());
 
         assertEquals(0, rover.getyPosition());
 
@@ -78,6 +78,6 @@ class MarsRoverTest {
 
         assertEquals(0, rover.getyPosition());
 
-        assertEquals(Command.SOUTH, rover.getDirection());
+        assertEquals(Command.NORTH, rover.getDirection());
     }
 }
