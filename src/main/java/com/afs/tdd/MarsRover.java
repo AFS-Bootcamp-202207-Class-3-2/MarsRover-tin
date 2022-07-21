@@ -22,10 +22,20 @@ public class MarsRover {
 
     public void getMarsRoverReport(String command) {
         switch (command){
-            case "M":
+            case Command.FORWARD:
                 move();
                 break;
+            case Command.TURN_LEFT:
+                trunLeft();
+                break;
 
+        }
+    }
+
+    private void trunLeft() {
+        switch (direction){
+            case Command.NORTH:
+                direction = Command.WEST;
         }
     }
 
