@@ -1,5 +1,7 @@
 package com.afs.tdd;
 
+import java.util.Arrays;
+
 public class MarsRover {
 
     private Integer xPosition;
@@ -20,7 +22,11 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void getMarsRoverReport(String command) {
+    public void getMarsRoverReport(String commands) {
+        Arrays.stream(commands.split("")).forEach(this::executeCommand);
+    }
+
+    public void executeCommand(String command){
         switch (command){
             case Command.FORWARD:
                 move();
@@ -38,6 +44,7 @@ public class MarsRover {
         switch (direction){
             case Command.NORTH:
                 direction = Command.EAST;
+                break;
             case Command.EAST:
                 direction = Command.SOUTH;
                 break;
@@ -54,6 +61,7 @@ public class MarsRover {
         switch (direction){
             case Command.NORTH:
                 direction = Command.WEST;
+                break;
             case Command.EAST:
                 direction = Command.NORTH;
                 break;

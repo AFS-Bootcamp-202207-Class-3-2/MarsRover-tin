@@ -185,4 +185,19 @@ class MarsRoverTest {
 
         assertEquals(Command.WEST, rover.getDirection());
     }
+
+    @Test
+    void should_go_to_1_1_N_when_getMarsRoverReport_given_0_0_N() {
+        //given
+        MarsRover rover = new MarsRover(0, 0, Command.NORTH);
+
+        //when
+        rover.getMarsRoverReport("MLMR");
+        //then
+        assertEquals(-1, rover.getxPosition());
+
+        assertEquals(1, rover.getyPosition());
+
+        assertEquals(Command.NORTH, rover.getDirection());
+    }
 }
