@@ -187,16 +187,16 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_1_1_N_when_getMarsRoverReport_given_0_0_N() {
+    void should_go_to_minus_2_0_N_when_getMarsRoverReport_given_0_0_N() {
         //given
         MarsRover rover = new MarsRover(0, 0, Command.NORTH);
 
         //when
-        rover.getMarsRoverReport("MLMR");
+        rover.getMarsRoverReport("MLMLMRMR");
         //then
-        assertEquals(-1, rover.getxPosition());
+        assertEquals(-2, rover.getxPosition());
 
-        assertEquals(1, rover.getyPosition());
+        assertEquals(0, rover.getyPosition());
 
         assertEquals(Command.NORTH, rover.getDirection());
     }
