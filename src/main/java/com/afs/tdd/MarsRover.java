@@ -53,6 +53,9 @@ public class MarsRover {
             case "N":
                 yPosition ++;
                 break;
+            case "E":
+                xPosition --;
+                break;
         }
     }
 
