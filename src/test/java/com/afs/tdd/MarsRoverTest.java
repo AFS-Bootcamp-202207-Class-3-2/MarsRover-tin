@@ -50,4 +50,19 @@ class MarsRoverTest {
 
         assertEquals("E", rover.getDirection());
     }
+
+    @Test
+    void should_go_to__1_0_E_when_getMarsRoverReport_given_0_0_E() {
+        //given
+        MarsRover rover = new MarsRover(0, 0, "E");
+
+        //when
+        rover.getMarsRoverReport("M");
+        //then
+        assertEquals(-1, rover.getxPosition());
+
+        assertEquals(0, rover.getyPosition());
+
+        assertEquals("E", rover.getDirection());
+    }
 }
