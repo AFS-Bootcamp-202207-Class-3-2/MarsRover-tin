@@ -62,6 +62,9 @@ public class MarsRover {
             case Command.EAST:
                 xPosition ++;
                 break;
+            case Command.WEST:
+                xPosition --;
+                break;
         }
     }
 
