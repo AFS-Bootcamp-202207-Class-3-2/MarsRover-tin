@@ -30,6 +30,11 @@ public class MarsRover {
     }
 
     private void move() {
+        switch (direction){
+            case "N":
+                yPosition ++;
+                break;
+        }
     }
 
     public Integer getxPosition() {
