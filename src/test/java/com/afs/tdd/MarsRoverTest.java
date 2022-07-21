@@ -52,7 +52,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to__1_0_E_when_getMarsRoverReport_given_0_0_E() {
+    void should_go_to_1_0_E_when_getMarsRoverReport_given_0_0_E() {
         //given
         MarsRover rover = new MarsRover(0, 0, Command.EAST);
 
@@ -67,7 +67,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_S_when_getMarsRoverReport_given_0_0_E() {
+    void should_go_to_0_0_N_when_getMarsRoverReport_given_0_0_E() {
         //given
         MarsRover rover = new MarsRover(0, 0, Command.EAST);
 
@@ -79,5 +79,20 @@ class MarsRoverTest {
         assertEquals(0, rover.getyPosition());
 
         assertEquals(Command.NORTH, rover.getDirection());
+    }
+
+    @Test
+    void should_go_to_0_0_S_when_getMarsRoverReport_given_0_0_E() {
+        //given
+        MarsRover rover = new MarsRover(0, 0, Command.EAST);
+
+        //when
+        rover.getMarsRoverReport(Command.TURN_RIGHT);
+        //then
+        assertEquals(0, rover.getxPosition());
+
+        assertEquals(0, rover.getyPosition());
+
+        assertEquals(Command.SOUTH, rover.getDirection());
     }
 }
