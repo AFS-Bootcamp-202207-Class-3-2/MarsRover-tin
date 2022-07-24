@@ -8,14 +8,8 @@ package com.afs.tdd;
  */
 public class ForwardCommand implements Command{
 
-    private MarsRover marsRover;
-
-    public ForwardCommand(MarsRover marsRover) {
-        this.marsRover = marsRover;
-    }
-
     @Override
-    public void execute() {
+    public void execute(MarsRover marsRover) {
         switch (marsRover.getDirection()){
             case CommandConstant.NORTH:
                 marsRover.setYPosition(marsRover.getYPosition() + 1);

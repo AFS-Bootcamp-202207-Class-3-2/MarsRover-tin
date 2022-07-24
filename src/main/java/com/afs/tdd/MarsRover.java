@@ -38,21 +38,8 @@ public class MarsRover {
         this.yPosition = yPosition;
     }
 
-    public void getMarsRoverReport(String commands){
-        Arrays.stream(commands.split("")).forEach(command -> checkCommand(this,command));
-    }
 
-    public void checkCommand(MarsRover marsRover, String command){
-        if(command.equals(CommandConstant.FORWARD)){
-            new Request(new ForwardCommand(marsRover)).executeCommand();
-            return;
-        }
-        if(command.equals(CommandConstant.TURN_LEFT)){
-            new Request(new TurnLeftCommand(marsRover)).executeCommand();
-            return;
-        }
-        new Request(new TurnRightCommand(marsRover)).executeCommand();
 
-    }
+
 }
 

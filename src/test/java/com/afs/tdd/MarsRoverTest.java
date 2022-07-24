@@ -5,18 +5,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MarsRoverTest {
+
+    CommandInvoke commandInvoke = new CommandInvoke();
     
     @Test
     void should_go_to_0_1_N_when_getMarsRoverReport_given_0_0_N() {
         //given
         MarsRover rover = new MarsRover(0,0,CommandConstant.NORTH);
         //then
-        rover.getMarsRoverReport(CommandConstant.FORWARD);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.FORWARD);
 
+        //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(1, rover.getYPosition());
-
         assertEquals(CommandConstant.NORTH, rover.getDirection());
     }
 
@@ -26,12 +27,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.TURN_LEFT);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_LEFT);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.WEST, rover.getDirection());
     }
 
@@ -41,12 +41,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.TURN_RIGHT);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_RIGHT);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.EAST, rover.getDirection());
     }
 
@@ -56,12 +55,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.FORWARD);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.FORWARD);
+
         //then
         assertEquals(1, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.EAST, rover.getDirection());
     }
 
@@ -71,12 +69,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.TURN_LEFT);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_LEFT);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.NORTH, rover.getDirection());
     }
 
@@ -86,12 +83,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.TURN_RIGHT);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_RIGHT);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.SOUTH, rover.getDirection());
     }
 
@@ -101,12 +97,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.FORWARD);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.FORWARD);
+
         //then
         assertEquals(-1, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.WEST, rover.getDirection());
     }
 
@@ -116,12 +111,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.TURN_LEFT);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_LEFT);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.SOUTH, rover.getDirection());
     }
 
@@ -131,12 +125,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.TURN_RIGHT);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_RIGHT);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.NORTH, rover.getDirection());
     }
 
@@ -146,12 +139,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.FORWARD);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.FORWARD);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(-1, rover.getYPosition());
-
         assertEquals(CommandConstant.SOUTH, rover.getDirection());
     }
 
@@ -161,12 +153,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.TURN_LEFT);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_LEFT);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.EAST, rover.getDirection());
     }
 
@@ -176,12 +167,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
 
         //when
-        rover.getMarsRoverReport(CommandConstant.TURN_RIGHT);
+        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_RIGHT);
+
         //then
         assertEquals(0, rover.getXPosition());
-
         assertEquals(0, rover.getYPosition());
-
         assertEquals(CommandConstant.WEST, rover.getDirection());
     }
 
@@ -191,12 +181,11 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
 
         //when
-        rover.getMarsRoverReport("LMRM");
+        commandInvoke.getMarsRoverReport(rover, "LMRM");
+
         //then
         assertEquals(-1, rover.getXPosition());
-
         assertEquals(1, rover.getYPosition());
-
         assertEquals(CommandConstant.NORTH, rover.getDirection());
     }
 }
