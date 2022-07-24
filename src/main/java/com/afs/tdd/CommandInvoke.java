@@ -24,4 +24,8 @@ public class CommandInvoke {
         }
         return new TurnRightCommand();
     }
+
+    public List<Command> getCommands() {
+        return commands;
+    }
 }
