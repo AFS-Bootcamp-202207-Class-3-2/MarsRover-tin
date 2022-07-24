@@ -7,8 +7,13 @@ package com.afs.tdd;
  */
 public class TurnRightCommand implements Command{
 
+    private MarsRover marsRover;
+
+    public TurnRightCommand(MarsRover rover) {
+        this.marsRover = rover;
+    }
     @Override
-    public void execute(MarsRover marsRover) {
+    public void execute() {
         switch (marsRover.getDirection()){
             case CommandConstant.NORTH:
                 marsRover.setDirection(CommandConstant.EAST);
