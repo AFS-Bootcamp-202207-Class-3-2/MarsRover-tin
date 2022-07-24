@@ -4,11 +4,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Invoke 调用者
+ */
 public class CommandInvoke {
 
     private List<Command> commands = new ArrayList<>();
 
-    public void getMarsRoverReport(MarsRover marsRover, String instructions){
+    //接受者
+    private MarsRover marsRover;
+
+    public CommandInvoke(MarsRover marsRover) {
+        this.marsRover = marsRover;
+    }
+
+    public void getMarsRoverReport(String instructions){
         Arrays.stream(instructions.split(""))
                 .forEach(instruction -> commands.add(convertCommand(instruction)));
         commands.stream()

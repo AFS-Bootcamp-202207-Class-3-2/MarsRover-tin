@@ -1,7 +1,8 @@
 package com.afs.tdd;
 
-import java.util.Arrays;
-
+/**
+ * 接受者
+ */
 public class MarsRover {
 
     private int xPosition;

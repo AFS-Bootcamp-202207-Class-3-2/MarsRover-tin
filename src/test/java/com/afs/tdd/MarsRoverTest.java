@@ -10,10 +10,10 @@ class MarsRoverTest {
     void should_go_to_0_1_N_when_getMarsRoverReport_given_0_0_N() {
         //given
         MarsRover rover = new MarsRover(0,0,CommandConstant.NORTH);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //then
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.FORWARD);
+        commandInvoke.getMarsRoverReport(CommandConstant.FORWARD);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -25,10 +25,10 @@ class MarsRoverTest {
     void should_go_to_0_0_W_when_getMarsRoverReport_given_0_0_N() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_LEFT);
+        commandInvoke.getMarsRoverReport(CommandConstant.TURN_LEFT);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -40,10 +40,10 @@ class MarsRoverTest {
     void should_go_to_0_0_E_when_getMarsRoverReport_given_0_0_N() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_RIGHT);
+        commandInvoke.getMarsRoverReport(CommandConstant.TURN_RIGHT);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -55,10 +55,10 @@ class MarsRoverTest {
     void should_go_to_1_0_E_when_getMarsRoverReport_given_0_0_E() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.FORWARD);
+        commandInvoke.getMarsRoverReport(CommandConstant.FORWARD);
 
         //then
         assertEquals(1, rover.getXPosition());
@@ -70,10 +70,10 @@ class MarsRoverTest {
     void should_go_to_0_0_N_when_getMarsRoverReport_given_0_0_E() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_LEFT);
+        commandInvoke.getMarsRoverReport(CommandConstant.TURN_LEFT);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -85,10 +85,10 @@ class MarsRoverTest {
     void should_go_to_0_0_S_when_getMarsRoverReport_given_0_0_E() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.EAST);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_RIGHT);
+        commandInvoke.getMarsRoverReport(CommandConstant.TURN_RIGHT);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -100,10 +100,10 @@ class MarsRoverTest {
     void should_go_to_minus_1_0_W_when_getMarsRoverReport_given_0_0_W() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.FORWARD);
+        commandInvoke.getMarsRoverReport(CommandConstant.FORWARD);
 
         //then
         assertEquals(-1, rover.getXPosition());
@@ -115,10 +115,10 @@ class MarsRoverTest {
     void should_go_to_0_0_S_when_getMarsRoverReport_given_0_0_W() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_LEFT);
+        commandInvoke.getMarsRoverReport(CommandConstant.TURN_LEFT);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -130,10 +130,10 @@ class MarsRoverTest {
     void should_go_to_0_0_N_when_getMarsRoverReport_given_0_0_W() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.WEST);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_RIGHT);
+        commandInvoke.getMarsRoverReport(CommandConstant.TURN_RIGHT);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -145,10 +145,10 @@ class MarsRoverTest {
     void should_go_to_0_minus_1_S_when_getMarsRoverReport_given_0_0_S() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.FORWARD);
+        commandInvoke.getMarsRoverReport(CommandConstant.FORWARD);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -160,10 +160,10 @@ class MarsRoverTest {
     void should_go_to_0_0_E_when_getMarsRoverReport_given_0_0_S() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_LEFT);
+        commandInvoke.getMarsRoverReport(CommandConstant.TURN_LEFT);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -175,10 +175,10 @@ class MarsRoverTest {
     void should_go_to_0_0_W_when_getMarsRoverReport_given_0_0_S() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.SOUTH);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, CommandConstant.TURN_RIGHT);
+        commandInvoke.getMarsRoverReport(CommandConstant.TURN_RIGHT);
 
         //then
         assertEquals(0, rover.getXPosition());
@@ -190,10 +190,10 @@ class MarsRoverTest {
     void should_go_to_minus_2_0_N_when_getMarsRoverReport_given_0_0_N() {
         //given
         MarsRover rover = new MarsRover(0, 0, CommandConstant.NORTH);
-        CommandInvoke commandInvoke = new CommandInvoke();
+        CommandInvoke commandInvoke = new CommandInvoke(rover);
 
         //when
-        commandInvoke.getMarsRoverReport(rover, "LMRM");
+        commandInvoke.getMarsRoverReport( "LMRM");
 
         //then
         assertEquals(-1, rover.getXPosition());
